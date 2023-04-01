@@ -28,7 +28,6 @@ body {
   background-color: var(--background-base);
   font-family: "Exo 2", sans-serif;
   scroll-behavior: smooth;
-
   --navbar-height: 4rem;
 }
 
@@ -447,7 +446,6 @@ li {
 /* MEDIA QUERY */
 
 @media screen and (max-width: 480px) {
-
   #projects {
     grid-gap: 6rem;
   }
@@ -485,6 +483,9 @@ li {
 }
 
 @media screen and (max-width: 1024px) {
+  body{
+    --navbar-height: 3.5rem;
+  }
   /* NAVBAR */
   .navigation {
     margin: 0 10%;

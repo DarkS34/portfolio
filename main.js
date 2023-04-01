@@ -71,14 +71,6 @@ document.querySelectorAll(".link").forEach((link) =>
   }) 
 );
 
-document.querySelector(".logo-link").addEventListener("click", (ev) => {
-  ev.preventDefault();
-  renderHome();
-  if (menuButton.classList.contains("menu-mode")) {
-    menuButton.click();
-  }
-});
-
 document.querySelectorAll(".site-menu a").forEach((link) => {
   link.addEventListener("click", (ev) => {
     menuButton.click();
