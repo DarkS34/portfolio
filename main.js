@@ -25,7 +25,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.5 }
+  { threshold: 0.75 }
 );
 
 const renderProjects = () => {
@@ -40,18 +40,18 @@ const renderProjects = () => {
       e.img,
       e.video
     );
-    document
-      .querySelectorAll(".project-container")
-      .forEach((el) => observer.observe(el));
   });
+  document
+  .querySelectorAll(".project")
+  .forEach((el) => observer.observe(el));
 };
 
 document.querySelectorAll(".link").forEach((link) =>
   link.addEventListener("click", (ev) => {
     ev.preventDefault();
     const category = ev.target.pathname.slice(1);
-    
-    if(!mainContainsSlide()){
+
+    if (!mainContainsSlide()) {
       mainContainer.classList.toggle("slide-mode");
       setTimeout(() => {
         mainContainer.classList.toggle("slide-mode");
@@ -68,7 +68,7 @@ document.querySelectorAll(".link").forEach((link) =>
         }
       }, 1100);
     }
-  }) 
+  })
 );
 
 document.querySelectorAll(".site-menu a").forEach((link) => {

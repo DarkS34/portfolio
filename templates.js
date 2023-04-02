@@ -20,23 +20,25 @@ export const homeTemplate = () => `
 `;
 
 export const projectTemplate = (name, description, git, web, img, video) => `
-<article class="project-container">
-      <div class="project-info">
-        <span class="project-name">${name}</span>
-        <span class="project-description">${description}</span>
-        <div class="project-links-container">
-          ${linksTemplate(git, web)}
+<div class="project-container">
+  <article class="project">
+        <div class="project-info">
+          <span class="project-name">${name}</span>
+          <span class="project-description">${description}</span>
+          <div class="project-links-container">
+            ${linksTemplate(git, web)}
+          </div>
         </div>
-      </div>
-      ${imgOrVideo(name, img, video)}
-</article>
+        ${imgOrVideo(name, img, video)}
+  </article>
+</div>
 `;
 
 const linksTemplate = (git, web) => {
   if (git !== "" && web !== "") {
     return `<a href="${git}" class="project-git" target="_blank"> ${gitSvgTemplate()} </a>
             <a href="${web}" class="project-web" target="_blank">${webSvgTemplate()}</a>`;
-  } else if (git === "" && web === ""){
+  } else if (git === "" && web === "") {
     return "";
   } else {
     return `<a href="${git}" class="project-git" target="_blank"> ${gitSvgTemplate()} </a>`;
