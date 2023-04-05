@@ -2,8 +2,9 @@ import { projects } from "./projects";
 import "./style.css";
 import { homeTemplate, projectTemplate } from "./templates";
 
-const mainContainer = document.querySelector(".site-main");
 const menuButton = document.querySelector(".menu-btn");
+const mainContainer = document.querySelector(".site-main");
+const footerContainer = document.querySelector(".site-footer")
 
 const mainContainsSlide = () => {
   return mainContainer.classList.contains("slide-mode");
@@ -53,8 +54,10 @@ document.querySelectorAll(".link").forEach((link) =>
 
     if (!mainContainsSlide()) {
       mainContainer.classList.toggle("slide-mode");
+      footerContainer.classList.toggle("slide-mode");
       setTimeout(() => {
         mainContainer.classList.toggle("slide-mode");
+        footerContainer.classList.toggle("slide-mode");
         mainContainer.innerHTML = "";
         switch (category) {
           case "home":
