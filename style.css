@@ -559,9 +559,9 @@ li {
     );
   }
 
-  .project.inScreen {
+  /* .project.inScreen {
     box-shadow: 0 0 50px 1px var(--text-complement);
-  }
+  } */
 
   .project-info {
     width: 100%;
