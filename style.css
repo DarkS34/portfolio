@@ -2,6 +2,16 @@
   --background-base: rgb(30, 30, 30);
   --background-secondary: #222223;
   --background-menu: rgb(245, 245, 245);
+  --background-experience-cards: linear-gradient(
+    to bottom,
+    var(--text-complement) 0%,
+    var(--background-secondary) 100%
+  );
+  --background-project-cards: linear-gradient(
+    to right,
+    var(--text-complement) 0%,
+    var(--background-secondary) 100%
+  );
 
   --menu-closed-items: rgb(245, 245, 245);
   --menu-opened-items: rgba(29, 29, 30, 0.749);
@@ -27,7 +37,28 @@ body {
   background-color: var(--background-base);
   font-family: "Exo 2", sans-serif;
   scroll-behavior: smooth;
+
+  /* NAVBAR */
   --navbar-height: 4rem;
+
+  /* EXPERIENCE */
+  --experience-container-height: calc(
+    var(--experience-middle-card-height) + 0.5rem
+  );
+  --experience-container-width: calc(
+    2 * var(--experience-side-card-width) + var(--experience-middle-card-width) +
+      2 * var(--experience-card-gap)
+  );
+  --experience-side-card-height: 325px;
+  --experience-side-card-width: 225px;
+  --experience-middle-card-height: 500px;
+  --experience-middle-card-width: 350px;
+  --experience-card-gap: 2rem;
+  --experience-card-margin: calc(
+    var(--experience-card-gap) + var(--experience-side-card-width)
+  );
+  --experience-btn-margin: 10rem;
+  --experience-card-logo-size: 44px;
 }
 
 body,
@@ -359,6 +390,219 @@ button {
   animation: items-slide-out 0.8s ease-in 0.3s both;
 }
 
+/* EXPERIENCES */
+
+#experiences {
+  height: calc(100vh - 2 * var(--navbar-height) - 20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  width: 100%;
+}
+
+.experience-container {
+  align-items: center;
+  display: flex;
+  justify-content: start;
+  gap: var(--experience-card-gap);
+  width: var(--experience-container-width);
+  height: var(--experience-container-height);
+  overflow: hidden;
+  animation: items-slide-in 0.8s ease-out both .1s;
+}
+
+.site-main.slide-mode .experience-container{
+  animation: items-slide-out 0.8s ease-in both .1s;
+}
+
+.experience-btn {
+  display: flex;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: transparent;
+  position: relative;
+}
+
+.experience-btn.btn-left::before,
+.experience-btn.btn-right::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--text-complement);
+  border-radius: 100%;
+  transform: scale(0);
+  transition: transform 0.2s ease-out;
+  z-index: -1;
+}
+
+.experience-btn.btn-left {
+  margin-inline-end: var(--experience-btn-margin);
+  animation: items-slide-in 0.8s ease-out both .2s;
+}
+
+.site-main.slide-mode .experience-btn.btn-left{
+  animation: items-slide-out 0.8s ease-in both .2s;
+}
+
+.experience-btn.btn-right {
+  margin-inline-start: var(--experience-btn-margin);
+  animation: items-slide-in 0.8s ease-out both;
+}
+
+.site-main.slide-mode .experience-btn.btn-right{
+  animation: items-slide-out 0.8s ease-in both;
+}
+
+.btn-left:hover::before,
+.btn-right:hover::before {
+  transform: scale(1);
+}
+
+.bottom-btn-container {
+  display: none;
+  gap: 5rem;
+  margin-top: var(--experience-btn-margin);
+  animation: items-slide-in 0.8s ease-out both .3s;
+}
+
+.site-main.slide-mode .bottom-btn-container {
+  animation: items-slide-out 0.8s ease-in both .3s;
+}
+
+.bottom-experience-btn {
+  display: flex;
+}
+
+.experience-card {
+  align-items: center;
+  background: var(--background-experience-cards);
+  border: 1px solid var(--border-primary);
+  color: var(--text-base);
+  display: flex;
+  flex-direction: column;
+  height: 0;
+  justify-content: flex-start;
+  min-width: var(--experience-side-card-width);
+  opacity: 0;
+  overflow: hidden;
+  padding: 2.5rem 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.turn-right,
+.turn-left {
+  opacity: 0.75;
+  height: var(--experience-side-card-height);
+  cursor: pointer;
+}
+
+.turn-right {
+  transform: perspective(1000px) rotateY(45deg);
+}
+
+.turn-left {
+  transform: perspective(1000px) rotateY(-45deg);
+}
+
+.experience-card:first-child {
+  margin-inline-start: var(--experience-card-margin);
+}
+
+.experience-card:last-child {
+  margin-inline-end: var(--experience-card-margin);
+}
+
+.middle-card {
+  cursor: auto;
+  height: var(--experience-middle-card-height);
+  min-width: var(--experience-middle-card-width);
+  opacity: 1;
+  transform: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.experience-card .logo-container {
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 10px #fff);
+}
+
+.experience-card .logo-container svg {
+  width: var(--experience-card-logo-size);
+  height: var(--experience-card-logo-size);
+}
+
+.job-info {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.experience-card .company-name {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.experience-card .working-interval {
+  font-size: 1rem;
+  font-weight: 200;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.experience-card .job-description {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--text-base);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.experience-card .resp-intro {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-decoration: underline;
+}
+
+.experience-card .job-responsibilities {
+  flex-direction: column;
+}
+
+.experience-card .responsibility {
+  display: flex;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.experience-card .responsibility::before {
+  content: "-";
+  margin-right: 0.75rem;
+}
+
+.experience-card .responsibility:last-child {
+  margin-bottom: 0;
+}
+
+.experience-card.middle-card .job-info {
+  display: flex;
+  animation: experience-card-opacity 0.5s ease-out both 0.2s;
+}
+
+@keyframes experience-card-opacity {
+  from {
+    opacity: 0;
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
 /* PROJECTS */
 
 #projects {
@@ -379,11 +623,7 @@ button {
 }
 
 .project {
-  background: linear-gradient(
-    to left,
-    var(--background-base),
-    var(--text-complement)
-  );
+  background: var(--background-project-cards);
   padding: 3rem;
   display: flex;
   align-items: center;
@@ -468,205 +708,6 @@ button {
   animation: items-slide-out 1.1s ease-in both;
 }
 
-
-
-/* EXPERIENCES */
-
-#experiences {
-  width: inherit;
-  height: calc(100vh - 2 * var(--navbar-height) - 2 * 32px - 20px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 2rem;
-}
-
-.experience-container {
-  align-items: center;
-  display: flex;
-  justify-content: start;
-  gap: 2rem;
-  width: calc(225px*2 + 350px + 2rem*2);
-  height: fit-content;
-  overflow: hidden;
-}
-
-.experience-btn{
-  display: flex;
-  width: fit-content;
-  height: fit-content;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  background-color: transparent;
-  border-radius: 100%;
-  position: relative;
-}
-
-.experience-btn.btn-left {
-  margin-inline-end: 10rem;
-}
-
-.experience-btn.btn-right {
-  margin-inline-start: 10rem;
-}
-
-.experience-btn.btn-left::before,
-.experience-btn.btn-right::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: var(--text-complement);
-  border-radius: 100%;
-  transform: scale(0);
-  transition: transform 0.2s ease-out;
-  z-index: -1;
-}
-
-.btn-left:hover::before,
-.btn-right:hover::before {
-  transform: scale(1);
-}
-
-.bottom-btn-container{
-  margin-top: 3rem;
-  display: none;
-  gap: 10vw;
-}
-
-.bottom-experience-btn {
-  display: flex;
-  cursor: pointer;
-}
-
-.experience-card {
-  align-items: center;
-  background-color: var(--background-secondary);
-  background: linear-gradient(to bottom, var(--text-complement) 0%, var(--background-secondary) 100%);
-  border: 1px solid var(--border-primary);
-  color: var(--text-base);
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  opacity: 0;
-  overflow: hidden;
-  transition: all .3s ease-in-out;
-  padding: 2.5rem 2rem;
-  height: 0;
-  min-width: 225px;
-  width: 225px;
-}
-
-.turn-right{
-  transform: perspective(1000px) rotateY(45deg);
-  opacity: .75;
-  height: 325px;
-}
-
-.turn-left{
-  transform: perspective(1000px) rotateY(-45deg);
-  opacity: .75;
-  height: 325px;
-}
-
-.experience-card:first-child{
-  margin-inline-start: calc(2rem + 225px);
-}
-
-.experience-card:last-child{
-  margin-inline-end: calc(2rem + 225px);
-}
-
-.middle-card{
-  width: 350px;
-  min-width: 350px;
-  height: 500px;
-  margin-bottom: 0;
-  opacity: 1;
-  transform: none;
-  transition: all .3s ease-in-out;
-  cursor: auto;
-}
-
-.experience-card .logo-container{
-  margin-bottom: 1rem;
-  filter: drop-shadow(0 0 10px var(--text-base));
-}
-
-.job-info{
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-width: calc(350px - 2*2rem);
-}
-
-.experience-card .company-name{
-  margin-bottom: .75rem;
-  font-size: 2rem;
-  font-weight: 300;
-  text-align: center;
-}
-
-.experience-card .working-interval{
-  font-size: 1rem;
-  font-weight: 200;
-  color: var(--text-secondary);
-  margin-bottom: 2rem;
-}
-
-.experience-card .job-description{
-  font-size: 1rem;
-  font-weight: 300;
-  color: var(--text-base);
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.experience-card .resp-intro{
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  text-decoration: underline;
-}
-
-.experience-card .job-responsibilities {
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.experience-card .responsibility{
-  display: flex;
-  font-size: .9rem;
-  margin-bottom: .75rem;
-}
-
-.experience-card .responsibility:last-child{
-  margin-bottom: 0;
-}
-
-.experience-card .responsibility::before{
-  content: "-";
-  margin-right: .75rem;
-}
-
-.experience-card.middle-card .job-info{
-  display: flex;
-  animation: experience-card-opacity .5s ease-out both .2s;
-}
-
-@keyframes experience-card-opacity {
-  from{
-    opacity: 0;
-    filter: blur(2px);
-  }
-  to{
-    opacity: 1;
-    filter: blur(0);
-  }
-}
-
 /* FOOTER */
 
 .site-footer {
@@ -740,100 +781,91 @@ button {
 /* MEDIA QUERY */
 
 @media screen and (max-width: 480px) {
- /* EXPERIENCE */
+  body {
+    /* EXPERIENCE */
+    --experience-container-height: 80%;
+    --experience-container-width: 100%;
+    --experience-side-card-height: min(25vh, 175px);
+    --experience-side-card-width: 100px;
+    --experience-middle-card-width: 100%;
+    --experience-card-gap: 0.5rem;
+    --experience-btn-margin: 5vh;
+  }
 
- #experiences{
-  padding: 1rem 2rem;
-  margin: 0;
-}
+  /* EXPERIENCE */
 
- .experience-container{
-  height: 80%;
-  max-height: 400px;
-  width: 100%;
-  gap: 0;
-}
+  .experience-container {
+    max-height: 400px;
+    overflow-x: scroll;
+  }
 
-.bottom-btn-container{
-  gap: 7.5vw;
-  margin-top: 2rem;
-}
+  .bottom-experience-btn svg {
+    width: 44px;
+    height: 44px;
+  }
 
-.bottom-experience-btn svg {
-  width: 44px;
-  height: 44px;
-}
+  .experience-card {
+    padding: 2rem;
+    height: var(--experience-side-card-height);
+    opacity: 1;
+    border-radius: 0.5rem;
+  }
 
-.experience-card{
-  min-width: 100px;
-  width: 100px;
-  height: 175px;
-  border: none;
-  background: linear-gradient(to bottom, rgba(64, 71, 167, .75) 0%, var(--background-base) 100%);
-  padding: 2rem;
-}
+  .experience-card:first-child {
+    margin-inline-start: 0;
+  }
 
-.experience-card:first-child{
-  margin-inline-start: 0;
-}
+  .experience-card:last-child {
+    margin-inline-end: 0;
+  }
 
-.experience-card:last-child{
-  margin-inline-end: 0;
-}
+  .turn-right,
+  .turn-left {
+    transform: none;
+  }
 
-.turn-right{
-  transform: perspective(1000px) rotateY(60deg);
-  height: min(25vh, 175px);
-}
-  
-.turn-left{
-  transform: perspective(1000px) rotateY(-60deg);
-  height: min(25vh, 175px);
-}
+  .middle-card {
+    height: 100%;
+    max-height: 400px;
+    overflow-y: scroll;
+  }
 
-.middle-card{
-  min-width: 100%;
-  height: 100%;
-  max-height: 400px;
-  overflow-y: hidden;
-}
+  .experience-card .logo-container {
+    margin-bottom: 0.5rem;
+  }
 
-.experience-card .logo-container{
-  margin-bottom: .5rem;
-}
+  .experience-card .logo-container svg {
+    width: 44px;
+    height: 44px;
+  }
 
-.experience-card .logo-container svg{
-  width: 44px;
-  height: 44px;
-}
+  .job-info {
+    min-width: calc(250px - 2 * 1.5rem);
+  }
 
-.job-info{
-  min-width: calc(250px - 2*1.5rem);
-}
+  .experience-card .company-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
 
-.experience-card .company-name{
-  font-size: 1.5rem;
-  margin-bottom: .5rem;
-}
+  .experience-card .working-interval {
+    font-size: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
 
-.experience-card .working-interval{
-  font-size: .75rem;
-  margin-bottom: 1.25rem;
-}
+  .experience-card .job-description {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+  }
 
-.experience-card .job-description{
-  font-size: .875rem;
-  margin-bottom: 1rem;
-}
+  .experience-card .resp-intro {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
 
-.experience-card .resp-intro{
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-
-.experience-card .responsibility{
-  font-size: .875rem;
-}
+  .experience-card .responsibility {
+    font-size: 0.875rem;
+  }
 
   /* PROJECTS */
   .project-container {
@@ -948,45 +980,44 @@ button {
 
   /* EXPERIENCE */
 
-  #experiences{
+  #experiences {
     flex-direction: column;
     justify-content: center;
-    height: calc(100vh - 2 * var(--navbar-height) - 2 * 1rem - 20px);
   }
 
-  .experience-btn{
+  .experience-btn {
     display: none;
   }
 
-  .bottom-btn-container{ 
+  .bottom-btn-container {
     display: flex;
   }
 
-  .experience-card .responsibility{
+  .experience-card .responsibility {
     margin-bottom: 1.25rem;
     color: var(--text-secondary);
     display: flex;
     height: 1rem;
     overflow: hidden;
-    transition: all .2s ease-in;
+    transition: all 0.2s ease-in;
     width: 90%;
   }
 
-  .experience-card .responsibility::before{
+  .experience-card .responsibility::before {
     content: "-";
-    margin-right: .5rem;
+    margin-right: 0.5rem;
   }
 
-  .experience-card .responsibility::after{
+  .experience-card .responsibility::after {
     content: "...";
   }
 
-  .experience-card .responsibility:hover{
+  .experience-card .responsibility:hover {
     color: var(--text-base);
     height: fit-content;
   }
 
-  .experience-card .responsibility:hover::after{
+  .experience-card .responsibility:hover::after {
     content: "";
   }
 
@@ -1005,95 +1036,71 @@ button {
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
+  body {
+    /* EXPERIENCE */
+    --experience-side-card-height: min(25vh, 175px);
+    --experience-side-card-width: 100px;
+    --experience-middle-card-height: min(50vh, 375px);
+    --experience-middle-card-width: 250px;
+    --experience-card-gap: 0.125rem;
+    --experience-btn-margin: 2rem;
+  }
 
   /* EXPERIENCE */
-  #experiences{
-    margin: 1rem;
-  }
-
-  .experience-container{
-    width: calc(2*100px + 250px + 2*.125rem);
-    gap: .125rem;
-  }
-
-  .bottom-btn-container{
-    gap: 7.5vw;
-    margin-top: 2rem;
-  }
 
   .bottom-experience-btn svg {
     width: 44px;
     height: 44px;
   }
 
-  .experience-card{
-    padding: 1.5rem 1rem;
-    min-width: 100px;
-    width: 100px;
+  .experience-card {
+    padding: 2rem 1.5rem;
   }
 
-  .experience-card:first-child{
-    margin-inline-start: calc(100px + .125rem);
-  }
-  
-  .experience-card:last-child{
-    margin-inline-end: calc(100px + .125rem);
+  .turn-right {
+    transform: perspective(1000px) rotateY(50deg);
   }
 
-  .turn-right{
-    transform: perspective(1000px) rotateY(45deg);
-    height: min(25vh,175px);
-  }
-    
-  .turn-left{
-    transform: perspective(1000px) rotateY(-45deg);
-    height: min(25vh,175px);
+  .turn-left {
+    transform: perspective(1000px) rotateY(-50deg);
   }
 
-  .middle-card{
-    width: 250px;
-    min-width: 250px;
-    height: min(50vh, 350px);
+  .middle-card {
     overflow-y: scroll;
   }
 
-  .experience-card .logo-container{
-    margin-bottom: .5rem;
+  .experience-card .logo-container {
+    margin-bottom: 0.5rem;
   }
 
-  .experience-card .logo-container svg{
+  .experience-card .logo-container svg {
     width: 32px;
     height: 32px;
   }
 
-  .job-info{
-    min-width: calc(250px - 2*1.5rem);
-  }
-
-  .experience-card .company-name{
+  .experience-card .company-name {
     font-size: 1.5rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 
-  .experience-card .working-interval{
-    font-size: .75rem;
+  .experience-card .working-interval {
+    font-size: 0.75rem;
     margin-bottom: 1.25rem;
   }
 
-  .experience-card .job-description{
-    font-size: .875rem;
+  .experience-card .job-description {
+    font-size: 0.875rem;
     margin-bottom: 1rem;
   }
 
-  .experience-card .resp-intro{
+  .experience-card .resp-intro {
     font-size: 1rem;
     margin-bottom: 1rem;
   }
 
-  .experience-card .responsibility{
-    font-size: .875rem;
+  .experience-card .responsibility {
+    font-size: 0.875rem;
   }
-
 
   /* PROJECTS */
   .project-container {
@@ -1139,78 +1146,59 @@ button {
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+  body {
+    /* EXPERIENCE */
+    --experience-side-card-height: min(30vh, 300px);
+    --experience-side-card-width: 200px;
+    --experience-middle-card-height: min(50vh, 450px);
+    --experience-middle-card-width: 300px;
+    --experience-card-gap: 0.125rem;
+    --experience-btn-margin: 2rem;
+  }
   /* EXPERIENCE */
 
-  #experiences{
-    margin: 1rem;
+  .experience-card {
+    padding: 2.25rem 1.75rem;
   }
 
-  .experience-container{
-    width: calc(2*200px + 300px + 2*.125rem);
-    gap: .125rem;
-  }
-
-  .experience-card{
-    padding: 2rem 1.5rem;
-    width: 200px;
-    min-width: 200px;
-  }
-
-  .experience-card:first-child{
-    margin-inline-start: calc(200px + .125rem);
-  }
-  
-  .experience-card:last-child{
-    margin-inline-end: calc(200px + .125rem);
-  }
-
-  .turn-right{
+  .turn-right {
     transform: perspective(1000px) rotateY(60deg);
-    height: min(30vh,300px);
-  }
-    
-  .turn-left{
-    transform: perspective(1000px) rotateY(-60deg);
-    height: min(30vh,300px);
   }
 
-  .middle-card{
-    width: 300px;
-    min-width: 300px;
-    height: min(50vh, 450px);
+  .turn-left {
+    transform: perspective(1000px) rotateY(-60deg);
+  }
+
+  .middle-card {
     overflow-y: scroll;
   }
 
-  .experience-card .logo-container{
-    margin-bottom: .75rem;
+  .experience-card .logo-container {
+    margin-bottom: 0.75rem;
   }
 
-  .job-info{
-    min-width: calc(300px - 2*1.5rem);
-  }
-
-  .experience-card .company-name{
+  .experience-card .company-name {
     font-size: 1.75rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 
-  .experience-card .working-interval{
-    font-size: .75rem;
+  .experience-card .working-interval {
+    font-size: 0.75rem;
     margin-bottom: 1.5rem;
   }
 
-  .experience-card .job-description{
-    font-size: .875rem;
+  .experience-card .job-description {
+    font-size: 0.875rem;
     margin-bottom: 1.25rem;
   }
 
-  .experience-card .resp-intro{
+  .experience-card .resp-intro {
     font-size: 1rem;
     margin-bottom: 1.5rem;
   }
 
-  .experience-card .responsibility{
-    font-size: .875rem;
+  .experience-card .responsibility {
+    font-size: 0.875rem;
   }
 
   /* PROJECTS */
@@ -1255,13 +1243,9 @@ button {
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
-  /* EXPERIENCE */
-  .experience-btn.btn-left {
-    margin-inline-end: 1rem;
-  }
-  
-  .experience-btn.btn-right {
-    margin-inline-start: 1rem;
+  body {
+    /* EXPERIENCE */
+    --experience-btn-margin: 1rem;
   }
 
   /* PROJECTS */

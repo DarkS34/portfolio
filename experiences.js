@@ -4,8 +4,6 @@ export const jobExperience = [
     logoSvg: `<svg
             xmlns="http://www.w3.org/2000/svg"
             class="icon icon-tabler icon-tabler-brand-google"
-            width="44"
-            height="44"
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="#f5f5f5"
@@ -29,8 +27,6 @@ export const jobExperience = [
     logoSvg: `<svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="icon icon-tabler icon-tabler-brand-windows"
-                width="44"
-                height="44"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="#f5f5f5"
@@ -59,8 +55,6 @@ export const jobExperience = [
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
             viewBox="0,0,256,256"
-            width="44px"
-            height="44px"
             fill-rule="nonzero"
             >
                 <g
@@ -100,8 +94,6 @@ export const jobExperience = [
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 viewBox="0,0,256,256"
-                width="44px"
-                height="44px"
                 fill-rule="nonzero"
                 >
                   <g
@@ -140,8 +132,6 @@ export const jobExperience = [
     logoSvg: `<svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 1346 1346"
-                width="44"
-                height="44"
                 >
                 <g>
                   <path fill="#f5f5f5"
@@ -160,6 +150,6 @@ export const jobExperience = [
     responsibilities: [
       "Diseñar e implementar la interfaz de usuario.",
       "Desarrollar y mantener el backend y la lógica del servidor.",
-    ]
-  }
+    ],
+  },
 ];

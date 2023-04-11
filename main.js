@@ -16,26 +16,26 @@ const mainContainsSlide = () => {
   return mainContainer.classList.contains("slide-mode");
 };
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("inScreen");
-        if (entry.target.lastElementChild.tagName === "VIDEO") {
-          entry.target.lastElementChild.play();
-        }
-      } else {
-        entry.target.classList.remove("inScreen");
-        if (entry.target.lastElementChild.tagName === "VIDEO") {
-          entry.target.lastElementChild.pause();
-        }
-      }
-    });
-  },
-  { threshold: 0.75 }
-);
-
 const renderProjects = () => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("inScreen");
+          if (entry.target.lastElementChild.tagName === "VIDEO") {
+            entry.target.lastElementChild.play();
+          }
+        } else {
+          entry.target.classList.remove("inScreen");
+          if (entry.target.lastElementChild.tagName === "VIDEO") {
+            entry.target.lastElementChild.pause();
+          }
+        }
+      });
+    },
+    { threshold: 0.75 }
+  );
+
   mainContainer.innerHTML += `<section id="projects"></section>`;
   const projectsContainer = document.querySelector("#projects");
   projects.forEach((e) => {
@@ -92,16 +92,20 @@ const renderExperience = () => {
   expCards[midCardPos].classList.toggle("middle-card");
 
   const scrollBymediaQuery = () => {
-    if (window.matchMedia('(min-width: 1025px)').matches){
+    if (window.matchMedia("(min-width: 1025px)").matches) {
       return 257;
-    }else if(window.matchMedia('(min-width: 769px) and (max-width: 1024px)').matches){
+    } else if (
+      window.matchMedia("(min-width: 769px) and (max-width: 1024px)").matches
+    ) {
       return 202;
-    } else if (window.matchMedia('(min-width: 481px) and (max-width: 768px)').matches){
+    } else if (
+      window.matchMedia("(min-width: 481px) and (max-width: 768px)").matches
+    ) {
       return 102;
-    } else if (window.matchMedia('(max-width: 480px)').matches){
-      return 100;
+    } else if (window.matchMedia("(max-width: 480px)").matches) {
+      return 108;
     }
-  }
+  };
 
   const btnsDisable = () => {
     midCardPos === 0
@@ -115,7 +119,7 @@ const renderExperience = () => {
   btnsDisable();
   rightBtn.forEach((e) => {
     e.addEventListener("click", () => {
-      if(midCardPos !== expCards.length-1){
+      if (midCardPos !== expCards.length - 1) {
         cardsContainer.scroll({
           left: cardsContainer.scrollLeft + scrollBymediaQuery(),
           behavior: "smooth",
@@ -128,8 +132,8 @@ const renderExperience = () => {
 
   leftBtn.forEach((e) => {
     e.addEventListener("click", () => {
-      if(midCardPos !== 0){
-        cardsContainer.scroll({ 
+      if (midCardPos !== 0) {
+        cardsContainer.scroll({
           left: cardsContainer.scrollLeft - scrollBymediaQuery(),
           behavior: "smooth",
         });
