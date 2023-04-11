@@ -33,10 +33,14 @@
   box-sizing: border-box;
 }
 
+html{
+  background: linear-gradient(to right, var(--background-base), rgb(41, 45, 92));
+}
+
 body {
-  background-color: var(--background-base);
   font-family: "Exo 2", sans-serif;
   scroll-behavior: smooth;
+  overflow: overlay;
 
   /* NAVBAR */
   --navbar-height: 4rem;
@@ -92,12 +96,10 @@ button {
 /* SCROLLBAR */
 html::-webkit-scrollbar{
   width: 10px;
-  position: absolute;
 }
 
 html::-webkit-scrollbar-track {
   background: transparent;
-
 }
 
 html::-webkit-scrollbar-thumb {
@@ -774,36 +776,9 @@ html::-webkit-scrollbar-thumb {
   overflow: hidden;
 }
 
-.footer-author{
-  position: absolute;
-  bottom: 10%;
-  text-align: center;
-  font-size: 16px;
-  animation: footer-slide-up 0.8s ease-out 0.4s both;
-  color: rgb(245, 245, 245);
-  opacity: .25;
-  transition: all .2s ease-in;
-}
-
-.footer-author:hover{
-  opacity: 1;
-}
-
-.site-footer.slide-mode .footer-author{
-  animation: footer-slide-down 0.8s ease-out 0.4s backwards;
-}
-
-.footer-h-line {
-  width: 100%;
-  height: 2px;
-  background-color: rgb(245, 245, 245, 0.25);
-  z-index: 1;
-  animation: footer-slide-up 0.8s ease-out 0.4s both;
-}
-
 .footer-links-container {
   height: 100%;
-  background-color: var(--background-base);
+  background-color: transparent;
   width: fit-content;
   z-index: 2;
   display: flex;
@@ -986,10 +961,6 @@ html::-webkit-scrollbar-thumb {
   }
 
   /* FOOTER */
-  .footer-h-line {
-    display: none;
-  }
-
   .footer-links-container {
     gap: 0;
     justify-content: space-around;

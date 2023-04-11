@@ -64,14 +64,15 @@ export const experienceTemplate = (
   cLogo,
   wInterval,
   description,
-  responsibilities
+  responsibilities,
+  web
 ) => `
   <article class="experience-card">
     <div class="logo-container">
       ${cLogo}
     </div>
     <div class="job-info">
-      <span class="company-name">${cName}</span>
+      <a href="${web}" target="_blank" class="company-name">${cName}</a>
       <span class="working-interval">${wInterval}</span>
       <span class="job-description">${description}</span>
       <p class="resp-intro">Responsabilidades:</p>

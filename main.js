@@ -74,7 +74,8 @@ const renderExperience = () => {
       e.logoSvg,
       e.dates,
       e.description,
-      e.responsibilities
+      e.responsibilities,
+      e.web
     );
   });
 

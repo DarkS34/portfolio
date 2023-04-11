@@ -21,6 +21,7 @@ export const jobExperience = [
       "Desarrollar y mantener aplicaciones web de alta calidad para el equipo de productos de Google Maps.",
       "Trabajar en estrecha colaboración con diseñadores y equipos de ingeniería para crear interfaces de usuario intuitivas y atractivas.",
     ],
+    web: "https://www.google.com/"
   },
   {
     company: "Microsoft",
@@ -48,6 +49,7 @@ export const jobExperience = [
       "Trabajar en el desarrollo de características clave para Microsoft Excel y Microsoft Power BI.",
       "Implementar y mantener pruebas automatizadas y manuales para garantizar la calidad del código.",
     ],
+    web: "https://www.microsoft.com"
   },
   {
     company: "Meta",
@@ -87,6 +89,7 @@ export const jobExperience = [
       "Desarrollar y mantener la infraestructura de backend para el equipo de mensajería de WhatsApp.",
       "Trabajar en estrecha colaboración con equipos de ingeniería en todo el mundo para garantizar la escalabilidad y la disponibilidad del sistema.",
     ],
+    web: "https://www.meta.com"
   },
   {
     company: "Amazon",
@@ -126,6 +129,7 @@ export const jobExperience = [
       "Desarrollar y mantener aplicaciones web de alta calidad para el equipo de Amazon Prime Video.",
       "Trabajar en estrecha colaboración con diseñadores y equipos de ingeniería para crear interfaces de usuario intuitivas y atractivas.",
     ],
+    web: "https://www.amazon.com"
   },
   {
     company: "ThePower <br> Business School",
@@ -151,5 +155,6 @@ export const jobExperience = [
       "Diseñar e implementar la interfaz de usuario.",
       "Desarrollar y mantener el backend y la lógica del servidor.",
     ],
+    web: "https://www.thepowermba.com"
   },
 ];
