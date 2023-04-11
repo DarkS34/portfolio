@@ -35,7 +35,7 @@ export const projects = [
     git: "https://github.com/DarkS34/Pokemon-Game",
     web: "",
     img: "",
-    video: "https://res.cloudinary.com/datpjjoam/video/upload/v1680040932/Rock%7BtheCode%7D/Projects/Project_3_Portfolio/v_tienda_filtro_xiaomi.mp4",
+    video: "https://res.cloudinary.com/datpjjoam/video/upload/v1681244819/v_portfolio-personal_u9k8kw.mp4",
   },
   {
     name: "API NASA",
