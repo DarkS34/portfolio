@@ -75,7 +75,7 @@ export const experienceTemplate = (
       <a href="${web}" target="_blank" class="company-name">${cName}</a>
       <span class="working-interval">${wInterval}</span>
       <span class="job-description">${description}</span>
-      <p class="resp-intro">Responsabilidades:</p>
+      <p class="resp-intro">Responsibilities:</p>
       <ul class="job-responsibilities">
       ${responsibilitiesTemplate(responsibilities)}
       </ul>

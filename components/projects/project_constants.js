@@ -31,11 +31,11 @@ export const projects = [
   {
     name: "Personal Portfolio",
     description:
-      "Portfolio created from scratch, I have worked on every aspect from design to implementation. Throughout the process, I have drawn inspiration from various websites to achieve a unique combination of visual elements and presentation",
+      "Portfolio created from scratch, I have worked on every aspect from design to implementation. Throughout the process, I have drawn inspiration from various websites to achieve a unique combination of visual elements and presentation.",
     git: "https://github.com/DarkS34/Pokemon-Game",
     web: "",
     img: "",
-    video: "https://res.cloudinary.com/datpjjoam/video/upload/v1681244819/v_portfolio-personal_u9k8kw.mp4",
+    video: "https://res.cloudinary.com/datpjjoam/video/upload/v1681244819/Rock%7BtheCode%7D/Projects/Project_3_Portfolio/v_portfolio-personal_u9k8kw.mp4",
   },
   {
     name: "NASA API - APOD & MRP",
@@ -49,7 +49,7 @@ export const projects = [
   {
     name: "Weather App",
     description:
-      "A simple weather app created with data thats fetched from openweater site",
+      "A minimalist weather application crafted by harnessing data retrieved from the OpenWeather website.",
     git: "https://github.com/DarkS34/Weather_App",
     web: "https://weather-app-oleksandr.netlify.app/",
     img: "",

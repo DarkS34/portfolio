@@ -99,7 +99,7 @@ html::-webkit-scrollbar{
 }
 
 html::-webkit-scrollbar-track {
-  background: transparent;
+  background-color: var(--background-base);
 }
 
 html::-webkit-scrollbar-thumb {
