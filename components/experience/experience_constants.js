@@ -14,12 +14,12 @@ export const jobExperience = [
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M17.788 5.108a9 9 0 1 0 3.212 6.892h-8" />
             </svg>`,
-    dates: "Enero 2016 - Mayo 2018",
+    dates: "-",
     description:
-      "Diseñé materiales para clientes, aprendí a trabajar bajo presión.",
+      "Cooming soon",
     responsibilities: [
-      "Desarrollar y mantener aplicaciones web de alta calidad para el equipo de productos de Google Maps.",
-      "Trabajar en estrecha colaboración con diseñadores y equipos de ingeniería para crear interfaces de usuario intuitivas y atractivas.",
+      "Cooming soon",
+      "Cooming soon",
     ],
     web: "https://www.google.com/"
   },
@@ -42,12 +42,12 @@ export const jobExperience = [
                     <line x1="12" y1="5" x2="12" y2="19" />
                     <line x1="4" y1="12" x2="20" y2="12" />
             </svg>`,
-    dates: "Junio 2018 - Agosto 2020",
+    dates: "-",
     description:
-      "Colaboré en la creación de campañas publicitarias, aprendí marketing digital.",
+      "Cooming soon",
     responsibilities: [
-      "Trabajar en el desarrollo de características clave para Microsoft Excel y Microsoft Power BI.",
-      "Implementar y mantener pruebas automatizadas y manuales para garantizar la calidad del código.",
+      "Cooming soon",
+      "Cooming soon",
     ],
     web: "https://www.microsoft.com"
   },
@@ -82,12 +82,12 @@ export const jobExperience = [
                     </g>
                 </g>
             </svg>`,
-    dates: "Septiembre 2020 - Diciembre 2021",
+    dates: "-",
     description:
-      "Creé aplicaciones web, aprendí a trabajar con tecnologías modernas.",
+      "Cooming soon",
     responsibilities: [
-      "Desarrollar y mantener la infraestructura de backend para el equipo de mensajería de WhatsApp.",
-      "Trabajar en estrecha colaboración con equipos de ingeniería en todo el mundo para garantizar la escalabilidad y la disponibilidad del sistema.",
+      "Cooming soon",
+      "Cooming soon",
     ],
     web: "https://www.meta.com"
   },
@@ -122,12 +122,12 @@ export const jobExperience = [
                   </g>
                   </g>
               </svg>`,
-    dates: "Enero 2022 - Mayo 2022",
+    dates: "-",
     description:
-      "Desarrollé aplicaciones móviles, aprendí a trabajar en equipo y programación.",
+      "Cooming soon",
     responsibilities: [
-      "Desarrollar y mantener aplicaciones web de alta calidad para el equipo de Amazon Prime Video.",
-      "Trabajar en estrecha colaboración con diseñadores y equipos de ingeniería para crear interfaces de usuario intuitivas y atractivas.",
+      "Cooming soon",
+      "Cooming soon",
     ],
     web: "https://www.amazon.com"
   },
@@ -148,12 +148,12 @@ export const jobExperience = [
                   />
                 </g>
               </svg>`,
-    dates: "Octubre 2022 - Presente",
+    dates: "-",
     description:
-      "Desarrollo completo de aplicaciones web en el frontend y backend.",
+      "Cooming soon",
     responsibilities: [
-      "Diseñar e implementar la interfaz de usuario.",
-      "Desarrollar y mantener el backend y la lógica del servidor.",
+      "Cooming soon",
+      "Cooming soon",
     ],
     web: "https://www.thepowermba.com"
   },

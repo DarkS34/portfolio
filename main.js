@@ -229,11 +229,11 @@ sectionLinks.forEach((link) =>
             break;
           case "experience":
             renderExperience();
-            changeSelectedSection("EXPERIENCIA");
+            changeSelectedSection("EXPERIENCE");
             break;
           case "projects":
             renderProjects();
-            changeSelectedSection("PROYECTOS");
+            changeSelectedSection("PROJECTS");
             break;
         }
       }, 1100);
