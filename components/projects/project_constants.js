@@ -6,7 +6,7 @@ export const projects = [
     git: "https://github.com/DarkS34/Pokemon-Game",
     web: "",
     img: "",
-    video: "https://res.cloudinary.com/datpjjoam/video/upload/v1680363728/Rock%7BtheCode%7D/Projects/Project_3_Portfolio/v_pokemon_game.mp4",
+    video: "https://res.cloudinary.com/projectsfs/video/upload/v1680363728/Rock%7BtheCode%7D/Projects/Project_3_Portfolio/v_pokemon_game.mp4",
   },
   {
     name: "Xiaomi Landing",
@@ -16,7 +16,7 @@ export const projects = [
     web: "https://landing-tienda-mi.netlify.app",
     img: "",
     video:
-      "https://res.cloudinary.com/datpjjoam/video/upload/v1680039174/Rock%7BtheCode%7D/Projects/Project_3_Portfolio/v_landing_xiaomi.mp4",
+      "https://res.cloudinary.com/projectsfs/video/upload/v1680039174/Rock%7BtheCode%7D/Projects/Project_3_Portfolio/v_landing_xiaomi.mp4",
   },
   {
     name: "Xiaomi Dynamic Page",
@@ -26,7 +26,7 @@ export const projects = [
     web: "https://tienda-dinamica-mi.netlify.app/",
     img: "",
     video:
-      "https://res.cloudinary.com/datpjjoam/video/upload/v1680040932/Rock%7BtheCode%7D/Projects/Project_3_Portfolio/v_tienda_filtro_xiaomi.mp4",
+      "https://res.cloudinary.com/projectsfs/video/upload/v1680040932/Rock%7BtheCode%7D/Projects/Project_3_Portfolio/v_tienda_filtro_xiaomi.mp4",
   },
   {
     name: "Personal Portfolio",
@@ -35,7 +35,7 @@ export const projects = [
     git: "https://github.com/DarkS34/Pokemon-Game",
     web: "",
     img: "",
-    video: "https://res.cloudinary.com/datpjjoam/video/upload/v1681244819/Rock%7BtheCode%7D/Projects/Project_3_Portfolio/v_portfolio-personal_u9k8kw.mp4",
+    video: "https://res.cloudinary.com/projectsfs/video/upload/v1681244819/Rock%7BtheCode%7D/Projects/Project_3_Portfolio/v_portfolio-personal_u9k8kw.mp4",
   },
   {
     name: "NASA API - APOD & MRP",
@@ -44,7 +44,7 @@ export const projects = [
     git: "https://github.com/DarkS34/Api_Nasa",
     web: "https://api-nasa-oleksandr.netlify.app/",
     img: "",
-    video: "https://res.cloudinary.com/datpjjoam/video/upload/v1693924915/Rock%7BtheCode%7D/Projects/Project_3_Portfolio/v-nasa-app_mamo56.mp4",
+    video: "https://res.cloudinary.com/projectsfs/video/upload/v1693924915/Rock%7BtheCode%7D/Projects/Project_3_Portfolio/v-nasa-app_mamo56.mp4",
   },
   {
     name: "Weather App",
@@ -53,6 +53,6 @@ export const projects = [
     git: "https://github.com/DarkS34/Weather_App",
     web: "https://weather-app-oleksandr.netlify.app/",
     img: "",
-    video: "https://res.cloudinary.com/datpjjoam/video/upload/v1693927811/Rock%7BtheCode%7D/Projects/Project_3_Portfolio/v-weather-app.mp4",
+    video: "https://res.cloudinary.com/projectsfs/video/upload/v1693927811/Rock%7BtheCode%7D/Projects/Project_3_Portfolio/v-weather-app.mp4",
   },
 ];

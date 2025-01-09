@@ -15,7 +15,7 @@ export const homeTemplate = () => `
       Si necesitas un desarrollador comprometido y apasionado, ¡no dudes
       en contactarme!
     </p>
-    <img class="intro-emoji" src="https://res.cloudinary.com/datpjjoam/image/upload/v1681241287/Rock%7BtheCode%7D/Projects/Project_3_Portfolio/memoji.png">
+    <img class="intro-emoji" src="https://res.cloudinary.com/projectsfs/image/upload/v1681241287/Rock%7BtheCode%7D/Projects/Project_3_Portfolio/memoji.png">
   </div>
 </section>
 `;
