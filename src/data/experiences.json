@@ -1,0 +1,21 @@
+[
+  {
+    "company": "Kairos Digital Solutions",
+    "logo_path": "/logos/kairosds.svg",
+    "dates": "February 2025 - June 2025",
+    "description":
+      "Cybersecurity internship focused on strengthening internal security processes and aligning with industry standards.",
+    "responsibilities": [
+      "Implemented security controls aligned with ISO 27001 and the Spanish National Security Framework (ENS).",
+      "Drafted internal security policies and continuous improvement proposals.",
+      "Collaborated on pentesting exercises and phishing simulations using GoPhish.",
+      "Designed cybersecurity awareness and training programs for employees.",
+      "Automated internal processes using low-code workflows in n8n.",
+      "Monitored security infrastructure with Wazuh and CrowdStrike, and visualized metrics using Grafana, Prometheus, and Loki.",
+      "Managed cloud environments (AWS, GCP, Azure) and CI/CD pipelines with GitLab.",
+      "Deployed services in Kubernetes clusters and maintained virtualized environments.",
+      "Handled mobile device and IT asset management using Applivery and Endpoint Central."
+    ],
+    "web": "https://www.kairosds.com/"
+  }
+]

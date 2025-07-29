@@ -433,8 +433,6 @@ html::-webkit-scrollbar-thumb {
   width: 100%;
 }
 
-
-
 .experience-container {
   align-items: center;
   display: flex;
@@ -538,10 +536,10 @@ html::-webkit-scrollbar-thumb {
   color: var(--text-base);
   display: flex;
   flex-direction: column;
-  height: 0;
+  height: 300;
   justify-content: flex-start;
   min-width: var(--experience-side-card-width);
-  opacity: 0;
+  /* opacity: 0; */
   overflow: hidden;
   padding: 2.5rem 2rem;
   transition: all 0.3s ease-in-out;
@@ -590,7 +588,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 .job-info {
-  display: none;
+  /* display: none; */
   flex-direction: column;
   justify-content: center;
   align-items: center;

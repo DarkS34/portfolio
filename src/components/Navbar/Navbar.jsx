@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
-      <nav class="navigation">
-        <div class="logo">
+      <nav className="navigation">
+        <div className="logo">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             id="logo-svg"
@@ -23,18 +23,18 @@ const Navbar = () => {
           </svg>
         </div>
 
-        <ul class="navigation-menu">
-          <li class="navigation-item">
+        <ul className="navigation-menu">
+          <li className="navigation-item">
             <Link className="link" to={"/"}>
               ABOUT ME
             </Link>
           </li>
-          <li class="navigation-item">
+          <li className="navigation-item">
             <Link className="link" to={"/experience"}>
               EXPERIENCE
             </Link>
           </li>
-          <li class="navigation-item">
+          <li className="navigation-item">
             <Link className="link" to={"/projects"}>
               PROJECTS
             </Link>

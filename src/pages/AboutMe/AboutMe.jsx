@@ -5,19 +5,16 @@ const AboutMe = () => {
     <>
       <section id="home">
         <div class="introduction">
-          <span class="intro-text">Hola, mi nombre es</span>
+          <span class="intro-text">Hi, my name is</span>
           <span class="name">OLEKSANDR YATSENTYUK</span>
-          <span class="profesion">y soy FullStack Developer.</span>
+          <span class="profesion">and I'm a Computer Engineer</span>
         </div>
         <div class="details-card">
           <p>
-            Soy un estudiante de ingeniería informática, apasionado por la
-            programación y en constante búsqueda de la perfección en mi trabajo.
-            Me encanta la idea de crear aplicaciones y sitios web útiles para
-            las personas, y siempre estoy en constante actualización y
-            aprendizaje de las últimas tendencias y herramientas en el mercado.
-            Si necesitas un desarrollador comprometido y apasionado, ¡no dudes
-            en contactarme!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+            inventore quos fugiat dolor sequi eaque eum eos ullam? Ratione
+            quibusdam voluptatem cupiditate necessitatibus pariatur repellendus
+            culpa iusto minus, praesentium quisquam!
           </p>
           <img
             class="intro-emoji"
