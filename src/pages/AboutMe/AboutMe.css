@@ -1,19 +1,19 @@
-#home {
+#about-me {
   width: inherit;
   height: calc(100vh - 2 * var(--navbar-height) - 2 * 32px - 20px);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 32px;
+  gap: 3rem;
 }
 
-.introduction {
+.presentation {
   display: flex;
   justify-content: start;
-  width: fit-content;
-  height: fit-content;
   flex-direction: column;
+  position: relative;
+  width: 900px;
 }
 
 /* SLIDE IN ANIMATION */
@@ -31,19 +31,21 @@
   }
 }
 
-#home .intro-text {
+#about-me span:nth-child(1) {
   color: var(--text-base);
+  width: fit-content;
   font-size: 2rem;
   font-weight: 200;
   animation: items-slide-in 0.8s ease-out both;
 }
 
-#home .name {
+#about-me span:nth-child(2) {
   background: linear-gradient(
     to right,
     var(--text-base),
     var(--text-complement)
   );
+  width: fit-content;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -52,25 +54,17 @@
   animation: items-slide-in 0.8s ease-out both 0.1s;
 }
 
-#home .profesion {
+#about-me span:nth-child(3) {
   color: var(--text-base);
+  width: fit-content;
   font-size: 3rem;
   padding-inline-start: 10rem;
   font-weight: 200;
   animation: items-slide-in 0.8s ease-out both 0.2s;
 }
 
-.details-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transform: translateX(-100vw);
-  margin-top: 3rem;
-  width: 800px;
-  animation: items-slide-in 0.8s ease-out both 0.3s;
-}
-
-.details-card p {
+.presentation-text {
+  margin-top: 2rem;
   color: var(--text-base);
   opacity: 0.65;
   transition: opacity 0.2s ease-in-out;
@@ -79,16 +73,22 @@
   width: 80%;
 }
 
-.intro-emoji {
-  width: 8rem;
+#about-me img {
+  width: 350px;
+  filter: grayscale(0.15);
+  opacity: 0.6;
+  mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+  border-radius: 30%;
   transition: all 0.2s ease-in-out;
 }
 
-.intro-emoji:hover {
+#about-me img:hover {
   transform: scale(1.05);
+    opacity: 1;
 }
 
-.details-card p:hover {
+.presentation-text:hover {
   opacity: 1;
 }
 
@@ -143,7 +143,7 @@
   }
 
   .details-card {
-    width: 85%;
+    width: 50%;
     flex-direction: column;
     gap: 2rem;
   }
@@ -158,10 +158,11 @@
     transition: opacity 0.2s ease-in-out;
     font-weight: 200;
     line-height: 150%;
-    width: 100%;
+    width: 50%;
   }
 
-  .intro-emoji{
+  .intro-emoji {
     width: 20%;
     min-width: 80px;
-  }}
+  }
+}
