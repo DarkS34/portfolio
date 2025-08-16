@@ -1,21 +1,14 @@
 export const homeTemplate = () => `
 <section id="home">
   <div class="introduction">
-    <span class="intro-text">Hola, mi nombre es</span>
+    <span class="intro-text">Hello, my name is</span>
     <span class="name">OLEKSANDR YATSENTYUK</span>
-    <span class="profesion">y soy FullStack Developer.</span>
+    <span class="profesion">and I'm a Computer Engineer</span>
   </div>
   <div class="details-card">
     <p>
-      Soy un estudiante de ingeniería informática, apasionado por la
-      programación y en constante búsqueda de la perfección en mi trabajo.
-      Me encanta la idea de crear aplicaciones y sitios web útiles para
-      las personas, y siempre estoy en constante actualización y
-      aprendizaje de las últimas tendencias y herramientas en el mercado.
-      Si necesitas un desarrollador comprometido y apasionado, ¡no dudes
-      en contactarme!
+    Interested in innovative technologies such as artificial intelligence and blockchain. I have brief experience in cybersecurity and stand out for working either independently or in a team, always with enthusiasm, commitment, and strong communication skills. I am prepared to contribute value and grow alongside organizations that embrace technological innovation.
     </p>
-    <img class="intro-emoji" src="https://res.cloudinary.com/projectsfs/image/upload/v1681241287/Rock%7BtheCode%7D/Projects/Project_3_Portfolio/memoji.png">
   </div>
 </section>
 `;

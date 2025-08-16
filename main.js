@@ -38,6 +38,7 @@ const changeSelectedSection = (section) => {
       e.parentElement.style.transform = "";
       e.style.borderBottom = "";
     }
+
     if (
       e.innerText === section &&
       e.parentElement.classList.contains("navigation-item-menu")
@@ -83,6 +84,7 @@ const renderExperience = () => {
   const expCards = document.querySelectorAll(".experience-card");
   const rightBtn = document.querySelectorAll(".btn-right");
   const leftBtn = document.querySelectorAll(".btn-left");
+
   let midCardPos = 0;
 
   expCards[midCardPos].classList.toggle("middle-card");
@@ -172,6 +174,10 @@ const renderExperience = () => {
       }
     });
   });
+
+  if (jobExperience.length === 1) {
+    btnsDisable();
+  }
 };
 
 const renderProjects = () => {
@@ -224,16 +230,16 @@ sectionLinks.forEach((link) =>
         mainContainer.innerHTML = "";
         switch (category) {
           case "home":
-            renderHome();
             changeSelectedSection("HOME");
+            renderHome();
             break;
           case "experience":
-            renderExperience();
             changeSelectedSection("EXPERIENCE");
+            renderExperience();
             break;
           case "projects":
-            renderProjects();
             changeSelectedSection("PROJECTS");
+            renderProjects();
             break;
         }
       }, 1100);

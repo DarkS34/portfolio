@@ -62,7 +62,7 @@ body {
     var(--experience-card-gap) + var(--experience-side-card-width)
   );
   --experience-btn-margin: 10rem;
-  --experience-card-logo-size: 44px;
+  --experience-card-logo-size: 100px;
 }
 
 body,
@@ -371,7 +371,8 @@ html::-webkit-scrollbar-thumb {
   transition: opacity 0.2s ease-in-out;
   font-weight: 200;
   line-height: 150%;
-  width: 80%;
+  width: 100%;
+  text-align: center;
 }
 
 .intro-emoji{
@@ -432,8 +433,6 @@ html::-webkit-scrollbar-thumb {
   padding: 2rem;
   width: 100%;
 }
-
-
 
 .experience-container {
   align-items: center;
@@ -542,9 +541,14 @@ html::-webkit-scrollbar-thumb {
   justify-content: flex-start;
   min-width: var(--experience-side-card-width);
   opacity: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
   padding: 2.5rem 2rem;
   transition: all 0.3s ease-in-out;
+}
+
+.experience-card::-webkit-scrollbar{
+  display: none;
 }
 
 .turn-right,
@@ -586,7 +590,7 @@ html::-webkit-scrollbar-thumb {
 
 .experience-card .logo-container svg {
   width: var(--experience-card-logo-size);
-  height: var(--experience-card-logo-size);
+  height: calc(var(--experience-card-logo-size)/2);
 }
 
 .job-info {
