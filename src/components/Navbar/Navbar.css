@@ -24,6 +24,18 @@
   transform: translateY(-1px);
 }
 
+.link {
+  text-decoration: none;
+  padding-inline: 0;
+}
+
+.link.active {
+  padding-bottom: 5px;
+  
+  text-shadow: 0 0 5px var(--text-base);
+  border-bottom: 1px solid var(--text-base);
+}
+
 /* .menu-btn {
   background-color: transparent;
   border: none;
