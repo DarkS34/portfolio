@@ -58,7 +58,9 @@ const webSvgTemplate = () => `
 `;
 
 const imgOrVideo = (name, img, vid) => {
-  if (img === "") {
+  if ((img === "") & (vid === "")) {
+    return ""
+  } else if ((img === "") & (vid !== "")) {
     return `<video class="project-video" src="${vid}" loop autoplay></video>`;
   } else {
     return `<img class="project-img" src="${img}" alt="${name}"/>`;
